@@ -9,6 +9,8 @@ Purpose: Stacks introduction assignment
 #ifndef STACK_STACK_H
 #define STACK_STACK_H
 
+#include <iostream>
+
 #define DEFAULTSIZE 1
 
 class myStack {
@@ -19,8 +21,10 @@ class myStack {
         bool push(int);
         bool pop();
         bool isEmpty();
+        void readStack();
 
     private:
+        int stackSize;
         int top;
         int *stack;
 

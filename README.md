@@ -1,2 +1,1 @@
-# empty
-empty repository with only a readme
+Toy project to introduce Stacks

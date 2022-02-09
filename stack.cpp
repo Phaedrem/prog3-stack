@@ -9,8 +9,10 @@ Purpose: Stacks introduction assignment
 myStack::myStack(int size){
     top = -1;
     if(size > DEFAULTSIZE){
+        stackSize = size;
         stack = new int[size];
     }else{
+        stackSize = DEFAULTSIZE;
         stack = new int[DEFAULTSIZE];
     }
 }
@@ -20,7 +22,13 @@ myStack::~myStack(){
 }
 
 bool myStack::push(int number){
-    return true;
+    bool success = false;
+    if(top <(stackSize-1)){
+        top++;
+        stack[top] = number;
+        success = true;
+    }
+    return success;
 }
 
 bool myStack::pop(){
@@ -33,4 +41,14 @@ bool myStack::isEmpty(){
         empty = true;
     }
     return empty;
+}
+
+
+//DEBUGGING METHOD
+void myStack::readStack(){
+    if(!isEmpty()){
+        for(int i=0; i<=top; i++){
+           std::cout << stack[i] << std::endl;
+        }
+    }
 }

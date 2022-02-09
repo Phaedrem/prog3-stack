@@ -31,16 +31,18 @@ bool myStack::push(int number){
     return success;
 }
 
-bool myStack::pop(){
-    return true;
+int myStack::pop(){
+    if(top > -1){
+        int element = stack[top];
+        top--;
+        return element;
+    }else{
+        throw 0;
+    }
 }
 
 bool myStack::isEmpty(){
-    bool empty = false;
-    if(top == -1){
-        empty = true;
-    }
-    return empty;
+    return top == (-1) ? true : false;
 }
 
 

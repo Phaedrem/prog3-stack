@@ -46,6 +46,15 @@ bool myStack::isEmpty(){
 }
 
 
+int myStack::peek(){
+    if(top > -1){
+        int element = stack[top];
+        return element;
+    }else{
+        throw 0;
+    }
+}    
+
 //DEBUGGING METHOD
 void myStack::readStack(){
     if(!isEmpty()){

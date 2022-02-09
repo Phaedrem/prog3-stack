@@ -22,6 +22,7 @@ class myStack {
         int pop();
         bool isEmpty();
         void readStack();
+        int peek();
 
     private:
         int stackSize;

@@ -12,6 +12,8 @@ Purpose: Stacks introduction assignment
 #include <iostream>
 #include "stack.h"
 
+#define SIZE 10
+
 using std::cout;
 using std::endl;
 

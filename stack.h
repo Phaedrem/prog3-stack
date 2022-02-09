@@ -19,7 +19,7 @@ class myStack {
         myStack(int);
         ~myStack();
         bool push(int);
-        bool pop();
+        int pop();
         bool isEmpty();
         void readStack();
 

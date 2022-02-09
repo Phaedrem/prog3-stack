@@ -28,5 +28,9 @@ bool myStack::pop(){
 }
 
 bool myStack::isEmpty(){
-    return true;
+    bool empty = false;
+    if(top == -1){
+        empty = true;
+    }
+    return empty;
 }

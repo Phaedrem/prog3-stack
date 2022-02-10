@@ -24,8 +24,10 @@ int main(int argc, char** argv){
     for(int i=0; i<=SIZE+10; i++){
         if(myStack1.push(i)){
             cout << "Element Insterted" << endl;
+            cout << myStack1.peek() << endl;
         }else{
             cout << "Overflow Error" << endl;
+            cout << myStack1.peek() << endl;
         }
     }
 

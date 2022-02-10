@@ -11,6 +11,8 @@ Purpose: Stacks introduction assignment
 
 #include <iostream>
 
+#define DEFAULTSIZE 1
+
 class MyStack {
 
     public:

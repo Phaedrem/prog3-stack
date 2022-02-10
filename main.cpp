@@ -95,9 +95,9 @@ int main(int argc, char** argv){
         cout << "random is " << random << endl;
         if(random == 0){
             if(myStack1.push(i)){
-            cout << "Element Insterted" << endl;
+                cout << "Element Insterted" << endl;
             }else{
-            cout << "Overflow Error" << endl;
+                cout << "Overflow Error" << endl;
             }
         }else{
             try{
@@ -105,6 +105,16 @@ int main(int argc, char** argv){
             }catch(...){
                 cout << "Underflow Error" << endl;
             }
+        }
+        try{
+            cout << "Peeking " << myStack1.peek() << endl;
+        }catch(...){
+            cout << "Peek Failed, list empty" << endl;
+        }
+        if(myStack1.isEmpty()){
+            cout << "Stack is empty" << endl;
+        } else{
+            cout << "Stack is not empty" << endl;
         }
     }
 

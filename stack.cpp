@@ -32,17 +32,17 @@ bool MyStack::push(int number){
 }
 
 int MyStack::pop(){
+    int element = stack[top];
     if(top > -1){
-        int element = stack[top];
         top--;
-        return element;
     }else{
         throw 0;
     }
+    return element;
 }
 
 bool MyStack::isEmpty(){
-    return top == (-1) ? true : false;
+    return top == (-1);
 }
 
 

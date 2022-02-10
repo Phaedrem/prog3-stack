@@ -13,11 +13,11 @@ Purpose: Stacks introduction assignment
 
 #define DEFAULTSIZE 1
 
-class myStack {
+class MyStack {
 
     public:
-        myStack(int);
-        ~myStack();
+        MyStack(int);
+        ~MyStack();
         bool push(int);
         int pop();
         bool isEmpty();

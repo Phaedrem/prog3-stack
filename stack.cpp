@@ -6,7 +6,7 @@ Purpose: Stacks introduction assignment
 
 #include "stack.h"
 
-myStack::myStack(int size){
+MyStack::MyStack(int size){
     top = -1;
     if(size > DEFAULTSIZE){
         stackSize = size;
@@ -17,11 +17,11 @@ myStack::myStack(int size){
     }
 }
 
-myStack::~myStack(){
+MyStack::~MyStack(){
     delete[] stack;
 }
 
-bool myStack::push(int number){
+bool MyStack::push(int number){
     bool success = false;
     if(top <(stackSize-1)){
         top++;
@@ -31,7 +31,7 @@ bool myStack::push(int number){
     return success;
 }
 
-int myStack::pop(){
+int MyStack::pop(){
     if(top > -1){
         int element = stack[top];
         top--;
@@ -41,12 +41,12 @@ int myStack::pop(){
     }
 }
 
-bool myStack::isEmpty(){
+bool MyStack::isEmpty(){
     return top == (-1) ? true : false;
 }
 
 
-int myStack::peek(){
+int MyStack::peek(){
     if(top > -1){
         int element = stack[top];
         return element;
@@ -56,7 +56,7 @@ int myStack::peek(){
 }    
 
 //DEBUGGING METHOD
-void myStack::readStack(){
+void MyStack::readStack(){
     if(!isEmpty()){
         for(int i=0; i<=top; i++){
            std::cout << stack[i] << std::endl;

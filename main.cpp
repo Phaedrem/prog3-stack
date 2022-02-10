@@ -11,7 +11,7 @@ Purpose: Stacks introduction assignment
 
 int main(int argc, char** argv){
     srand(time(NULL));
-    myStack myStack1(SIZE);
+    MyStack myStack1(SIZE);
 
     if(myStack1.isEmpty()){
         cout << "Stack is empty" << endl;

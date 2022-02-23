@@ -32,13 +32,10 @@ bool MyStack::push(int number){
 }
 
 int MyStack::pop(){
-    int element = stack[top];
-    if(top > -1){
-        top--;
-    }else{
-        throw 0;
+    if(top <0){
+        throw 01;
     }
-    return element;
+    return stack[top--];
 }
 
 bool MyStack::isEmpty(){
@@ -47,13 +44,11 @@ bool MyStack::isEmpty(){
 
 
 int MyStack::peek(){
-    if(top > -1){
-        int element = stack[top];
-        return element;
-    }else{
-        throw 0;
+    if(top <0){
+        throw 01;
     }
-}    
+    return stack[top];
+}  
 
 //DEBUGGING METHOD
 void MyStack::readStack(){
